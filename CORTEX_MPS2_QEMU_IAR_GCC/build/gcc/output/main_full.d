@@ -1,0 +1,155 @@
+output/main_full.o: ../../../CORTEX_MPS2_QEMU_IAR_GCC/main_full.c \
+ ../../../Source/include/FreeRTOS.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/FreeRTOSConfig.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcRecorder.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcDefines.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcConfig.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/SMM_MPS2.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/CMSDK_CM3.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/core_cm3.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis_version.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis_compiler.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis_gcc.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/mpu_armv7.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcKernelPortConfig.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcTypes.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcHardwarePort.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcStreamingConfig.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcKernelPortStreamingConfig.h \
+ ../../../FreeRTOS-Plus-Trace/kernelports/FreeRTOS/include/trcKernelPort.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcHeap.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcString.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcStaticBuffer.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcError.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcEvent.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcEventBuffer.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcMultiCoreEventBuffer.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcTimestamp.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcEntryTable.h \
+ ../../../FreeRTOS-Plus-Trace/streamports/RingBuffer/include/trcStreamPort.h \
+ ../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcStreamPortConfig.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcISR.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcTask.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcObject.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcPrint.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcExtension.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcUtility.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcStackMonitor.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcInternalEventBuffer.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcDiagnostics.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcAssert.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcRunnable.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcDependency.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcProcess.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcThread.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcInterval.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcStateMachine.h \
+ ../../../FreeRTOS-Plus-Trace/include/trcCounter.h \
+ ../../../Source/include/projdefs.h ../../../Source/include/portable.h \
+ ../../../Source/include/deprecated_definitions.h \
+ ../../../Source/portable/GCC/ARM_CM3/portmacro.h \
+ ../../../Source/include/mpu_wrappers.h ../../../Source/include/task.h \
+ ../../../Source/include/list.h ../../../Source/include/queue.h \
+ ../../../Source/include/task.h ../../../Source/include/semphr.h \
+ ../../../Source/include/queue.h ../../../Common/include/death.h \
+ ../../../Common/include/blocktim.h ../../../Common/include/semtest.h \
+ ../../../Common/include/PollQ.h ../../../Common/include/GenQTest.h \
+ ../../../Common/include/QPeek.h ../../../Common/include/recmutex.h \
+ ../../../Common/include/IntQueue.h ../../../Common/include/QueueSet.h \
+ ../../../Common/include/EventGroupsDemo.h \
+ ../../../Common/include/MessageBufferDemo.h \
+ ../../../Common/include/StreamBufferDemo.h \
+ ../../../Common/include/AbortDelay.h ../../../Common/include/countsem.h \
+ ../../../Common/include/dynamic.h \
+ ../../../Common/include/MessageBufferAMP.h \
+ ../../../Common/include/QueueOverwrite.h \
+ ../../../Common/include/QueueSetPolling.h \
+ ../../../Common/include/StaticAllocation.h \
+ ../../../Common/include/TaskNotify.h \
+ ../../../Common/include/TaskNotifyArray.h \
+ ../../../Common/include/TimerDemo.h \
+ ../../../Common/include/StreamBufferInterrupt.h \
+ ../../../Common/include/IntSemTest.h
+../../../Source/include/FreeRTOS.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/FreeRTOSConfig.h:
+../../../FreeRTOS-Plus-Trace/include/trcRecorder.h:
+../../../FreeRTOS-Plus-Trace/include/trcDefines.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcConfig.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/SMM_MPS2.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/CMSDK_CM3.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/core_cm3.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis_version.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis_compiler.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/cmsis_gcc.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/CMSIS/mpu_armv7.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcKernelPortConfig.h:
+../../../FreeRTOS-Plus-Trace/include/trcTypes.h:
+../../../FreeRTOS-Plus-Trace/include/trcHardwarePort.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcStreamingConfig.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcKernelPortStreamingConfig.h:
+../../../FreeRTOS-Plus-Trace/kernelports/FreeRTOS/include/trcKernelPort.h:
+../../../FreeRTOS-Plus-Trace/include/trcHeap.h:
+../../../FreeRTOS-Plus-Trace/include/trcString.h:
+../../../FreeRTOS-Plus-Trace/include/trcStaticBuffer.h:
+../../../FreeRTOS-Plus-Trace/include/trcError.h:
+../../../FreeRTOS-Plus-Trace/include/trcEvent.h:
+../../../FreeRTOS-Plus-Trace/include/trcEventBuffer.h:
+../../../FreeRTOS-Plus-Trace/include/trcMultiCoreEventBuffer.h:
+../../../FreeRTOS-Plus-Trace/include/trcTimestamp.h:
+../../../FreeRTOS-Plus-Trace/include/trcEntryTable.h:
+../../../FreeRTOS-Plus-Trace/streamports/RingBuffer/include/trcStreamPort.h:
+../../../CORTEX_MPS2_QEMU_IAR_GCC/TraceRecorderConfig/trcStreamPortConfig.h:
+../../../FreeRTOS-Plus-Trace/include/trcISR.h:
+../../../FreeRTOS-Plus-Trace/include/trcTask.h:
+../../../FreeRTOS-Plus-Trace/include/trcObject.h:
+../../../FreeRTOS-Plus-Trace/include/trcPrint.h:
+../../../FreeRTOS-Plus-Trace/include/trcExtension.h:
+../../../FreeRTOS-Plus-Trace/include/trcUtility.h:
+../../../FreeRTOS-Plus-Trace/include/trcStackMonitor.h:
+../../../FreeRTOS-Plus-Trace/include/trcInternalEventBuffer.h:
+../../../FreeRTOS-Plus-Trace/include/trcDiagnostics.h:
+../../../FreeRTOS-Plus-Trace/include/trcAssert.h:
+../../../FreeRTOS-Plus-Trace/include/trcRunnable.h:
+../../../FreeRTOS-Plus-Trace/include/trcDependency.h:
+../../../FreeRTOS-Plus-Trace/include/trcProcess.h:
+../../../FreeRTOS-Plus-Trace/include/trcThread.h:
+../../../FreeRTOS-Plus-Trace/include/trcInterval.h:
+../../../FreeRTOS-Plus-Trace/include/trcStateMachine.h:
+../../../FreeRTOS-Plus-Trace/include/trcCounter.h:
+../../../Source/include/projdefs.h:
+../../../Source/include/portable.h:
+../../../Source/include/deprecated_definitions.h:
+../../../Source/portable/GCC/ARM_CM3/portmacro.h:
+../../../Source/include/mpu_wrappers.h:
+../../../Source/include/task.h:
+../../../Source/include/list.h:
+../../../Source/include/queue.h:
+../../../Source/include/task.h:
+../../../Source/include/semphr.h:
+../../../Source/include/queue.h:
+../../../Common/include/death.h:
+../../../Common/include/blocktim.h:
+../../../Common/include/semtest.h:
+../../../Common/include/PollQ.h:
+../../../Common/include/GenQTest.h:
+../../../Common/include/QPeek.h:
+../../../Common/include/recmutex.h:
+../../../Common/include/IntQueue.h:
+../../../Common/include/QueueSet.h:
+../../../Common/include/EventGroupsDemo.h:
+../../../Common/include/MessageBufferDemo.h:
+../../../Common/include/StreamBufferDemo.h:
+../../../Common/include/AbortDelay.h:
+../../../Common/include/countsem.h:
+../../../Common/include/dynamic.h:
+../../../Common/include/MessageBufferAMP.h:
+../../../Common/include/QueueOverwrite.h:
+../../../Common/include/QueueSetPolling.h:
+../../../Common/include/StaticAllocation.h:
+../../../Common/include/TaskNotify.h:
+../../../Common/include/TaskNotifyArray.h:
+../../../Common/include/TimerDemo.h:
+../../../Common/include/StreamBufferInterrupt.h:
+../../../Common/include/IntSemTest.h:
