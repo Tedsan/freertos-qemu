@@ -11,7 +11,7 @@ MAKE = make
 
 CFLAGS += -ffreestanding -mthumb -mcpu=cortex-m3
 CFLAGS += -Wall -Wextra -Wshadow -Wno-unused-value
-CFLAGS += -g3 -Os -ffunction-sections -fdata-sections
+CFLAGS += -g3 -O0 -ffunction-sections -fdata-sections
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT $@
 #CFLAGS += -std=c99
 #CFLAGS += -Wpedantic -fanalyzer

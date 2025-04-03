@@ -33,6 +33,8 @@ extern void xPortPendSVHandler( void );
 extern void xPortSysTickHandler( void );
 extern void TIMER0_Handler( void );
 extern void TIMER1_Handler( void );
+extern void PORT0_ALL_IRQHandler( void );
+extern void PORT0_0_IRQHandler( void );
 
 /* Exception handlers. */
 static void HardFault_Handler( void ) __attribute__( ( naked ) );
@@ -75,6 +77,10 @@ const uint32_t* isr_vector[] __attribute__((section(".isr_vector"), used)) =
     0,
     0,
     0, // Ethernet   13
+    0,
+    0,
+    ( uint32_t * ) PORT0_ALL_IRQHandler, // PORT0_ALL_IRQn
+    ( uint32_t * ) PORT0_0_IRQHandler,   // PORT0_0_IRQn
 };
 
 void Reset_Handler( void )
@@ -146,5 +152,3 @@ void HardFault_Handler( void )
         " .ltorg                                                    \n"
     );
 }
-
-
