@@ -65,9 +65,13 @@
 #include "timers.h"
 #include "queue.h"
 
+/* GPIO割り込み機能 */
+#include "gpio_interrupt.h"
+
 /* Priorities at which the tasks are created. */
 #define mainQUEUE_RECEIVE_TASK_PRIORITY    ( tskIDLE_PRIORITY + 2 )
 #define mainQUEUE_SEND_TASK_PRIORITY       ( tskIDLE_PRIORITY + 1 )
+#define mainGPIO_INTERRUPT_TASK_PRIORITY   ( tskIDLE_PRIORITY + 3 ) /* 割り込み処理タスクは高い優先度 */
 
 /* The rate at which data is sent to the queue.  The times are converted from
  * milliseconds to ticks using the pdMS_TO_TICKS() macro. */
@@ -128,6 +132,27 @@ void main_blinky( void )
                      NULL );                          /* The task handle is not required, so NULL is passed. */
 
         xTaskCreate( prvQueueSendTask, "TX", configMINIMAL_STACK_SIZE, NULL, mainQUEUE_SEND_TASK_PRIORITY, NULL );
+        
+        /* GPIO割り込み処理タスクを作成 */
+        xTaskCreate( vGPIOInterruptTask,
+                     "GPIO_IRQ",
+                     configMINIMAL_STACK_SIZE,
+                     NULL,
+                     mainGPIO_INTERRUPT_TASK_PRIORITY,
+                     NULL );
+        
+        /* キー入力処理タスクを作成 */
+        xTaskCreate( vKeyInputTask,
+                     "KEY_INPUT",
+                     configMINIMAL_STACK_SIZE,
+                     NULL,
+                     tskIDLE_PRIORITY + 1,
+                     NULL );
+        
+        /* GPIOの初期化と割り込み設定 */
+        vGPIOInit();
+        
+        printf("GPIO割り込みタスクと初期化が完了しました\r\n");
 
         /* Create the software timer, but don't start it yet. */
         xTimer = xTimerCreate( "Timer",                     /* The text name assigned to the software timer - for debug only as it is not used by the kernel. */

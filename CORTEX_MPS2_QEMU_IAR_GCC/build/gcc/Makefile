@@ -11,7 +11,7 @@ MAKE = make
 
 CFLAGS += -ffreestanding -mthumb -mcpu=cortex-m3
 CFLAGS += -Wall -Wextra -Wshadow -Wno-unused-value
-CFLAGS += -g3 -Os -ffunction-sections -fdata-sections
+CFLAGS += -g3 -O0 -ffunction-sections -fdata-sections
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)" -MT $@
 #CFLAGS += -std=c99
 #CFLAGS += -Wpedantic -fanalyzer
@@ -93,6 +93,7 @@ INCLUDE_DIRS += -I$(DEMO_PROJECT) -I$(DEMO_PROJECT)/CMSIS
 SOURCE_FILES += $(DEMO_PROJECT)/main.c
 SOURCE_FILES += $(DEMO_PROJECT)/main_blinky.c
 SOURCE_FILES += $(DEMO_PROJECT)/main_full.c
+SOURCE_FILES += $(DEMO_PROJECT)/gpio_interrupt.c
 SOURCE_FILES += ./startup_gcc.c
 SOURCE_FILES += ./RegTest.c
 # Lightweight print formatting to use in place of the heavier GCC equivalent.
@@ -173,5 +174,3 @@ clean:
 print-%  : ; @echo $* = $($*)
 
 .PHONY: all clean
-
-

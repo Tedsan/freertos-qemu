@@ -1,0 +1,27 @@
+# Makefile for GPIO割り込み機能の単体テスト
+
+# コンパイラとフラグ
+CC = gcc
+CFLAGS = -Wall -Wextra -g -DUNIT_TEST
+
+# ソースファイル
+SRC = ../../gpio_interrupt_test.c
+
+# 出力ファイル
+TARGET = gpio_interrupt_test
+
+# ビルドルール
+all: $(TARGET)
+
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $@ $<
+
+# テスト実行
+test: $(TARGET)
+	./$(TARGET)
+
+# クリーンアップ
+clean:
+	rm -f $(TARGET)
+
+.PHONY: all test clean
